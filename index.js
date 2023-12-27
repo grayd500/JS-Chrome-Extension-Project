@@ -15,6 +15,7 @@ function renderLeads() {
         // Refactor the code below to use a template string
         listItems += `
         <li>
+        https://
         <a target=_blank href= ${myLeads[i]}> 
         ${myLeads[i]}
         </a>
