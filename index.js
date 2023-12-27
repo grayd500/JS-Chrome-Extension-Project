@@ -1,14 +1,18 @@
 let myLeads = []
-const inputEl = document.getElementById('input-el')
+const inputEl = document.getElementById("input-el")
 const inputBtn = document.getElementById("input-btn")
-
+const ulEl = document.getElementById("ul-el")
 
 inputBtn.addEventListener("click", function() {
-    // Push the value from the inputEl into the myLeads array 
-    // instead of the hard-coded "www.awesomeleads.com" value
-    // Google -> "get value from input field javascript"
     myLeads.push(inputEl.value)
-    console.log(myLeads)
+    renderLeads()
 })
 
-
+// 1. Wrap the code below in a renderLeads() function
+function renderLeads() {
+    let listItems = ""
+for (let i = 0; i < myLeads.length; i++) {
+    listItems += "<li>" + myLeads[i] + "</li>"
+}
+ulEl.innerHTML = listItems
+}
